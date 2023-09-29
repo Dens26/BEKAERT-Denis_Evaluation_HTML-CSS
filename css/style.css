@@ -70,6 +70,12 @@ ul{
         margin-inline: 2rem;
     }
 }
+@media screen and (max-width:576px) {
+    .mainHeader a{
+        padding: 0.5rem;
+        font-size: 0.7rem;
+    }
+}
 /* End Header */
 
 /* Jumbotron */
@@ -127,6 +133,7 @@ ul{
 /* End Jumbotron */
 
 /* Galery */
+
 .galery{
     margin-inline: 2rem;
     margin-top: 2rem;
@@ -194,6 +201,22 @@ ul{
 .galery article:hover a, .galery article:focus a{
     opacity: 1;
 }
+@media screen and (max-width:576px) {
+    .galery{
+        margin-inline: 0.5rem;
+    }
+    .galery img{
+        height: 150px;
+    }
+    .galery div{
+        gap: 0.5rem;
+    }
+    .galery a{
+        text-transform: uppercase;
+        padding: 0.5rem;
+        font-size: 0.7rem;
+    }
+}
 @media screen and (min-width:720px) {
     .galery img{
         width: 100%;
@@ -214,9 +237,13 @@ ul{
 /* End Galery */
 
 /* Icons */
+.icons img{
+    width: 100%;
+}
 .icons div:nth-child(1), .icons div:nth-child(2){
     padding: 0 4rem;
     display: flex;
+    flex: 1 1 auto;
     justify-content: space-between;
 }
 .icons a:hover{
@@ -278,6 +305,14 @@ ul{
 }
 .team img:hover{
     opacity: 0.5;
+}
+@media screen and (max-width:576px) {
+    .team , .team figure figcaption{
+        padding: 0;
+    }
+    .team p{
+        font-size: 0.7rem;
+    }
 }
 @media screen and (min-width:992px) {
     .team{
@@ -399,6 +434,11 @@ ul{
 .blog article:hover a, .blog article:focus a{
     opacity: 1;
 }
+@media screen and (max-width:576px){
+    .blog{
+        padding: 0;
+    }
+}
 @media screen and (min-width:992px){
 
     .blog{
@@ -483,10 +523,6 @@ ul{
         grid-column: 2/3;
         grid-row: 2/3;
     }
-    /* .contact .btn{
-        position: absolute;
-        top: 480px;
-    } */
 }
 /* End Contact */
 
@@ -509,14 +545,23 @@ ul{
     align-items: center;
     gap: 0.1rem;
 }
-.information a span{
+.information a .adresse{
     display: block;
 }
 .information img:hover{
     opacity: 0.5;
     cursor: pointer;
 }
+@media screen and (max-width:576px) {
+    .information{
+        padding: 0;
+    }
+    .information a span{
+        display: block;
+    }
+}
 /* End Information */
+/* Social network */
 .network img{
     width: 48px;
     height: 48px;
@@ -530,9 +575,15 @@ ul{
 .network img:hover{
     opacity: 0.5;
 }
+@media screen and (max-width:576px) {
+    .network{
+        gap: 2rem;
+    }
+}
 /* End Social network */
 /* Footer */
 footer{
+    color: white;
     height: 100px;
     background-color:rgb(36, 36, 36);
     display: flex;
@@ -546,9 +597,21 @@ footer{
 }
 .footer a, p{
     align-self: center;
+    color: white;
 }
 .footer a span{
     display: none;
+}
+@media screen and (max-width:576px) {
+    .footer{
+        padding: 0;
+    }
+    .footer img{
+        display: none;
+    }
+    .footer a, p{
+        font-size: 0.7rem;
+    }
 }
 @media screen and (min-width:992px) {
     .footer a span{
