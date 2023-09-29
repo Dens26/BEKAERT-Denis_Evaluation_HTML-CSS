@@ -1,0 +1,559 @@
+/* Reset */
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* En Reset */
+/* Global */
+body{
+    font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: black;
+}
+.btn{
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: rgb(253, 236, 0);
+    border: 1px solid white;
+    padding: 0.8rem;
+    width: 200px;
+    transition: background-color ease 0.5s;
+}
+.btn:hover, .btn:focus {
+    background-color: rgba(253, 236, 0, .3);
+}
+a{
+    text-decoration: none;
+}a, a:visited{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+}
+/* End Global */
+
+/* Header */
+.mainHeader a{
+    text-transform: uppercase;
+    display: block;
+    padding: 1rem;
+}
+.mainHeader a:hover{
+    font-weight: bold;
+}
+.mainHeader .active{
+    font-weight: bold;
+}
+.mainHeader{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+.mainHeader span{
+    display: block;
+}
+.mainNav ul{
+    display: flex;
+    justify-content: center;
+}
+@media screen and (min-width:992px)
+{
+    .mainHeader span{
+        display: initial;
+    }
+    .mainHeader{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-inline: 2rem;
+    }
+}
+/* End Header */
+
+/* Jumbotron */
+.jumbotron .btn{
+    display: none;
+}
+.jumbotron .btn:hover{
+    font-weight: bold;
+}
+.jumbotron{
+    display: grid;
+    padding: 2rem;
+    gap: 1rem;
+}
+.jumbotron img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.jumbotron h1{
+    font-size: 3rem;
+}
+.jumbotron h1 span{
+    display: block;
+}
+@media screen and (min-width:992px) {
+    .jumbotron{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 175px 1fr 45px;
+        align-items: center;
+        gap: 2rem;
+    }
+    .jumbotron h1{
+        grid-column: 1/1;
+        grid-row: 1/1;
+        text-align: left;
+    }
+    .jumbotron p{
+        grid-column: 1/1;
+        grid-row: 2/3;
+        text-align: left;
+    }
+    .jumbotron .btn{
+        display: initial;
+
+        grid-column: 1/1;
+        grid-row: 3/4;
+    }
+    .jumbotron img{
+        grid-column: 2/3;
+        grid-row: 1/-1;
+        height: 100%;
+    }
+}
+/* End Jumbotron */
+
+/* Galery */
+.galery{
+    margin-inline: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: column;
+}
+.galery img{
+    width: 100%;
+    height: 238px;
+    object-fit: cover;
+}
+.galery h2{
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 2rem;
+}
+.galery a{
+    text-transform: uppercase;
+    display: block;
+    padding: .5rem;
+    margin-top:  2rem;
+    margin-bottom: 2rem;
+}
+.galery a:hover{
+    font-weight: bold;
+}
+.galery .active{
+    background-color: rgb(253, 236, 0);
+}
+.galery ul{
+    display: flex;
+}
+.galery div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.galery .btn{
+    align-self: center;
+}
+.galery article a{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: rgb(253, 236, 0);
+    opacity: 0;
+}
+.galery article a span{
+    display: block;
+    font-size: 0.5rem}
+.galery article{
+    display: grid;
+}
+.galery article img, .galery article a{
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    align-self: center;
+}
+.galery article:hover img, .galery article:focus img{
+    opacity: 0.35;
+}
+.galery article:hover a, .galery article:focus a{
+    opacity: 1;
+}
+@media screen and (min-width:720px) {
+    .galery img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+@media screen and (min-width:992px) {
+    .galery div{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .galery img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+/* End Galery */
+
+/* Icons */
+.icons div:nth-child(1), .icons div:nth-child(2){
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+.icons a:hover{
+    opacity: 0.5;
+}
+
+@media screen and (min-width:992px) {
+    .icons div:nth-child(1), .icons div:nth-child(2){
+        display: inline-block;
+        padding: 0;
+    }
+    .icons{
+        display: flex;
+        justify-content: center;
+    }    
+}
+/* End Icons */
+
+/* Team */
+.team{
+    padding: 2rem;
+    display: grid;
+    gap: 2rem;
+}
+.team h2{
+    text-transform: uppercase;
+}
+.team img{
+    padding: 0 6rem;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+.team figure{
+    display: grid;
+}
+.team figure img, .team figure figcaption{
+    grid-column: 1/1;
+    grid-row: 1/1;
+}
+.team figure figcaption{
+    margin: 0 6rem;
+    background-color:  rgb(253, 236, 0);
+    width: 300px;
+    align-self: end;
+    justify-self: start;
+    text-align: left;
+    padding: 0.7rem;
+    line-height: 1.5rem;
+}
+.team figure figcaption span{
+    display: block;
+    color: white;
+}
+.team h3{
+    font-size: 1.5rem;
+}
+.team a:hover{
+    font-weight: bold;
+}
+.team img:hover{
+    opacity: 0.5;
+}
+@media screen and (min-width:992px) {
+    .team{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    .team h2{
+        grid-column: 1/-1;
+        grid-row: 1;
+        text-align: left;
+    }
+    .team p{
+        grid-column: 1/-1;
+        grid-row: 2;
+        text-align: left;
+    }
+    .team p span{
+        display: block;
+    }
+    .team figure:nth-child(1)
+    {
+        grid-column: 1/2;
+        grid-row: 3;
+    }
+    .team figure:nth-child(2)
+    {
+        grid-column: 2/3;
+        grid-row: 3;
+    }
+    .team div{
+        grid-column: 1/-1;
+        grid-row: 4;
+    }
+    .team div h3{
+        align-self: center;
+        margin-bottom: 2rem;
+    }
+    .team div p{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .team img{
+        padding: 0;
+        width: 100%;
+        height: 550px;
+        object-fit: cover;
+    }
+    .team figure figcaption{
+        margin: 0;
+    }
+}
+@media screen and (min-width:1184px) {
+    .team{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .team div{
+        grid-column: 3/4;
+        grid-row: 3;
+    }
+}
+/* End Team */
+
+/* Blog */
+.blog img{
+    width: 100%;
+}
+.blog{
+    background-color: rgb(248, 248, 248);
+    padding: 2rem;
+    display: grid;
+}
+.blog h2{
+    font-size: 2.5rem;
+    padding: 2rem 0;
+}
+.p_blog{
+    padding: 2rem 0;
+}
+.blog .p_blog span{
+    display: block;
+}
+.card{
+    background-color: white;
+    display: grid;
+    margin: 0 6rem;
+}
+.card div h3{
+    text-align: left;
+    margin: 1rem 1rem;
+}
+.card div p{
+    text-align: left;
+    margin: 1rem 1rem;
+}
+.blog article a{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: rgb(253, 236, 0);
+    opacity: 0;
+}
+.blog article a span{
+    display: block;
+    font-size: 0.5rem}
+.blog article{
+    display: grid;
+}
+.blog article img, .blog article a{
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    align-self: center;
+}
+.blog article:hover img, .blog article:focus img{
+    opacity: 0.35;
+}
+.blog article:hover a, .blog article:focus a{
+    opacity: 1;
+}
+@media screen and (min-width:992px){
+
+    .blog{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .blog h2{
+        grid-column: 1/-1;
+        grid-row: 1;
+        text-align: left;
+    }
+    .blog p{
+        grid-column: 1/-1;
+        grid-row: 2;
+        text-align: left;
+    }
+    .card{
+        margin: 0 1rem;
+    }
+    .card:nth-child(1)
+    {
+        grid-column: 1/2;
+        grid-row: 3;
+    }
+    .blog img{
+        height: 200px;
+    }
+}
+/* End Blog */
+
+/* Contact */
+.contact form input, .contact form textarea{
+    padding: 5px;
+    width: 100%;
+    color: black;
+    background-color: rgb(248, 248, 248);
+    margin: 0.5rem 0;
+    border: 0;
+}
+.contact form textarea{
+    resize: none;
+    height: 100%;
+}
+.contact img{
+    width: 100%;
+    object-fit: cover;
+    margin-top: 1rem;
+}
+.contact{
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+}
+.contactHeader h2, .contactHeader p, .contactHeader h3{
+    text-align: left;
+    margin-top: 1rem;
+}
+.contactHeader p span{
+    display: block;
+}
+.contact form{
+    display: grid;
+}
+.contact .btn{
+    margin-top: 1rem;
+}
+@media screen and (min-width:992px)
+{
+    .contact{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        position: relative;
+    }
+    .contactHeader{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+    .contact form{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .contact img{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    /* .contact .btn{
+        position: absolute;
+        top: 480px;
+    } */
+}
+/* End Contact */
+
+/* Information */
+.information img{
+    width: 48px;
+    height: 48px;
+}
+.information{
+    padding: 2rem;
+    margin-top: 2rem;
+}
+.information ul{
+    display: flex;
+    justify-content: space-between;
+}
+.information div{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 0.1rem;
+}
+.information a span{
+    display: block;
+}
+.information img:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+/* End Information */
+.network img{
+    width: 48px;
+    height: 48px;
+}
+.network{
+    margin-top: 2rem;
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+}
+.network img:hover{
+    opacity: 0.5;
+}
+/* End Social network */
+/* Footer */
+footer{
+    height: 100px;
+    background-color:rgb(36, 36, 36);
+    display: flex;
+    align-items: center;
+}
+.footer{
+    padding: 0 2rem;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: space-between;
+}
+.footer a, p{
+    align-self: center;
+}
+.footer a span{
+    display: none;
+}
+@media screen and (min-width:992px) {
+    .footer a span{
+        display: initial;
+    }
+}
+/* End Footer */
