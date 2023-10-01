@@ -253,6 +253,7 @@ ul{
 @media screen and (min-width:992px) {
     .icons div:nth-child(1), .icons div:nth-child(2){
         padding: 0;
+        margin: 0 2rem;
     }
     .icons{
         display: flex;
